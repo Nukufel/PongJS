@@ -26,4 +26,6 @@ export default class Paddle{
     }
 
 
+
+
 }

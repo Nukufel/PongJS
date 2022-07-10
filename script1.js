@@ -14,9 +14,7 @@ function update(time) {
         const delta = time - lastTime
         runPressedButtons()
         ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()])
-        computerPaddle.update(delta, ball.y)
         if(isLose()) handleLose()
-
     }
 
     lastTime = time
@@ -36,14 +34,7 @@ function handleLose() {
         computerScoreElem.textContent = parseInt(computerScoreElem.textContent) + 1
     }
     ball.reset()
-    computerPaddle.reset()
-
 }
-
-document.addEventListener("mousemove", e => {
-    playerPaddle.position = (e.y / window.innerHeight) * 100
-})
-
 
   const handleKeyDown = (e) => {
       controller1[e.keyCode] && (controller1[e.keyCode].pressed = true)
@@ -56,8 +47,10 @@ document.addEventListener("mousemove", e => {
   }
 
   const controller1 = {
-      87: {pressed: false, func: move1Up},
-      83: {pressed: false, func: move1Down},
+    87: {pressed: false, func: move1Up},
+    83: {pressed: false, func: move1Down},
+    38: {pressed: false, func: move2Up},
+    40: {pressed: false, func: move2Down}
   }
 
   const runPressedButtons = () => {
@@ -72,17 +65,28 @@ document.addEventListener("mousemove", e => {
 
 
   function move1Up(){
-      if (playerPaddle.position>=0){
-          playerPaddle.position -= 0.2;
+    if (playerPaddle.position>=0){
+        playerPaddle.position -= 0.2;
+    }
+  }
+
+ function move1Down(){
+     if (playerPaddle.position<=100) {
+         playerPaddle.position += 0.2;
+     }
+  }
+
+  function move2Up(){
+      if (computerPaddle.position>=0) {
+          computerPaddle.position -= 0.2;
       }
   }
 
-  function move1Down(){
-      if (playerPaddle.position<=100) {
-          playerPaddle.position += 0.2;
-      }
+  function move2Down(){
+    if (computerPaddle.position<=100) {
+        computerPaddle.position += 0.2;
+    }
   }
-
 
 
 
