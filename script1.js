@@ -66,25 +66,25 @@ function handleLose() {
 
   function move1Up(){
     if (playerPaddle.position>=0){
-        playerPaddle.position -= 0.2;
+        playerPaddle.position -= 0.5;
     }
   }
 
  function move1Down(){
      if (playerPaddle.position<=100) {
-         playerPaddle.position += 0.2;
+         playerPaddle.position += 0.5;
      }
   }
 
   function move2Up(){
       if (computerPaddle.position>=0) {
-          computerPaddle.position -= 0.2;
+          computerPaddle.position -= 0.5;
       }
   }
 
   function move2Down(){
     if (computerPaddle.position<=100) {
-        computerPaddle.position += 0.2;
+        computerPaddle.position += 0.5;
     }
   }
 

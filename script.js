@@ -73,13 +73,13 @@ document.addEventListener("mousemove", e => {
 
   function move1Up(){
       if (playerPaddle.position>=0){
-          playerPaddle.position -= 0.2;
+          playerPaddle.position -= 0.5;
       }
   }
 
   function move1Down(){
       if (playerPaddle.position<=100) {
-          playerPaddle.position += 0.2;
+          playerPaddle.position += 0.5;
       }
   }
 
