@@ -63,6 +63,17 @@ body{
     border-right: .5vh solid white;
 }
 
+.midLigne{
+    --x: 50;
+    position: absolute;
+    left: calc(var(--x)*1vw);
+    transform: translatex(-50%);
+    background-color: white;
+    width: 4px;
+    height: 1000px;
+
+}
+
 
 
 
