@@ -17,24 +17,41 @@ body{
     min-height: 20%;
     min-width: 20%;
     align-self: center;
-    font-family: monospace;
+    font-family: "Arial Rounded MT Bold", monospace;
     font-size: 40px;
+    border-radius: 15px;
+    transition: all 500ms;
+    border: none;
+}
+
+.single:hover{
+    background-color: #3b6363;
+    color: white;
 }
 
 .two{
     min-height: 20%;
     min-width: 20%;
     align-self: center;
-    font-family: monospace;
+    font-family: "Arial Rounded MT Bold", monospace;
     font-size: 40px;
+    border-radius: 15px;
+    transition: all 500ms;
+    border: none;
+}
+
+.two:hover{
+    background-color: #3b6363;
+    color: white;
 }
 
 .text {
     flex-shrink: 0;
     align-self: start;
-    border: 3px solid black;
     margin-top: 10%;
-    font-family: monospace;
+    font-family: "Arial Rounded MT Bold", monospace;
+    color: white;
     font-size: 50px;
     text-align: center;
+    font-weight: bold;
 }
